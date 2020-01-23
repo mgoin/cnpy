@@ -3,8 +3,7 @@
 // license available in LICENSE file, or at
 // http://www.opensource.org/licenses/mit-license.php
 
-#ifndef LIBCNPY_H_
-#define LIBCNPY_H_
+#pragma once
 
 #include <algorithm>
 #include <cassert>
@@ -736,5 +735,3 @@ load_the_npz_array(FILE* fp, uint32_t compr_bytes, uint32_t uncompr_bytes)
 }
 
 } // namespace cnpy
-
-#endif
