@@ -1,3 +1,5 @@
+## This fork was made to turn cnpy into a single header-only library
+
 # Purpose:
 
 NumPy offers the `save` method for easy saving of arrays into .npy and `savez` for zipping multiple .npy arrays together into a .npz file. 
@@ -13,22 +15,14 @@ Loading data written in numpy formats into C++ is equally simple, but requires y
 
 # Installation:
 
-Default installation directory is /usr/local. 
-To specify a different directory, add `-DCMAKE_INSTALL_PREFIX=/path/to/install/dir` to the cmake invocation in step 4.
+No installation is needed. 
 
-1. get [cmake](www.cmake.org)
-2. create a build directory, say $HOME/build
-3. cd $HOME/build
-4. cmake /path/to/cnpy
-5. make
-6. make install
+To use, `#include"cnpy.h"` in your source code. You might need to add `--std=c++11 -lz` to your build flags.
 
-# Using:
-
-To use, `#include"cnpy.h"` in your source code. Compile the source code mycode.cpp as
+Example: Compile the source code `mycode.cpp` as
 
 ```bash
-g++ -o mycode mycode.cpp -L/path/to/install/dir -lcnpy -lz --std=c++11
+g++ -o mycode mycode.cpp --std=c++11 -lz
 ```
 
 # Description:
@@ -52,4 +46,4 @@ struct NpyArray {
 };
 ```
 
-See [example1.cpp](example1.cpp) for examples of how to use the library. example1 will also be build during cmake installation.
+See [example1.cpp](example1.cpp) for examples of how to use the library.
