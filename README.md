@@ -1,5 +1,7 @@
 ## This fork was made to turn cnpy into a single header-only library
 
+### All you need to do is `#include "cnpy.h"`
+
 # Purpose:
 
 NumPy offers the `save` method for easy saving of arrays into .npy and `savez` for zipping multiple .npy arrays together into a .npz file. 
@@ -17,7 +19,7 @@ Loading data written in numpy formats into C++ is equally simple, but requires y
 
 No installation is needed. 
 
-To use, `#include"cnpy.h"` in your source code. You might need to add `--std=c++11 -lz` to your build flags.
+To use, `#include "cnpy.h"` in your source code. You might need to add `--std=c++11 -lz` to your build flags.
 
 Example: Compile the source code `mycode.cpp` as
 
